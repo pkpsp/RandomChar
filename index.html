@@ -1,0 +1,72 @@
+<html>
+
+    <head>
+        <title>Random Character</title>
+        <script>
+
+            function capitalLetters(){
+                var l = document.getElementById("charL");
+                var alpha = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","Y"];
+                l.innerHTML = alpha[Math.floor(Math.random() * alpha.length)];
+                l.className = "r";
+                
+            }
+            function smallLetters(){
+                var l = document.getElementById("charL");
+                var alpha = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","y"];
+                l.innerHTML = alpha[Math.floor(Math.random() * alpha.length)];
+                l.className = "g";
+
+            }
+            function mixedLetters(){
+                var l = document.getElementById("charL");
+                var alpha = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","Y","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","y"];
+                l.innerHTML = alpha[Math.floor(Math.random() * alpha.length)];
+                l.className = "b";
+            }
+
+        </script>
+
+        <style>
+
+            .btns {
+                width: 200px; 
+                height: 100px; 
+                font-size: 25;
+            }
+            .arts{
+                width: 20px; 
+                float: left;
+                margin-top: 123;
+                margin-left: 30;
+            }
+            label {
+                font-size: 40;
+            }
+            .r {
+                color: red
+            }
+            .g {
+                color: green
+            }
+            .b {
+                color: blue
+            }
+
+
+        </style>
+    </head>
+
+
+    <body>
+
+        <nav style="float: left">
+            <input type="Submit" value="Generate Capital" class="btns" onclick="capitalLetters()"> <br>
+            <input type="Submit" value="Generate Small" class="btns" onclick="smallLetters()"> <br>
+            <input type="Submit" value="Generate Any" class="btns" onclick="mixedLetters()">
+        </nav>
+        <article class="arts">
+            <label id="charL" class="r"></label>
+        </article>
+    </body>
+</html>
